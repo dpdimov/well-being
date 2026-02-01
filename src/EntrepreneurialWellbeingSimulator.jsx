@@ -471,7 +471,7 @@ export default function EntrepreneurialWellbeingSimulator() {
         </p>
       </header>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '200px 1fr 210px', gap: '1rem', maxWidth: '1150px', margin: '0 auto' }}>
+      <div className="main-grid">
         
         {/* Left Panel: Parameters */}
         <aside style={{ background: 'rgba(30, 41, 59, 0.7)', borderRadius: '10px', padding: '0.9rem', border: '1px solid #334155' }}>
@@ -713,7 +713,7 @@ export default function EntrepreneurialWellbeingSimulator() {
 
               {/* Metrics */}
               {finalState && (
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0.4rem' }}>
+                <div className="metrics-grid">
                   {[
                     { label: 'Performance', value: finalState.performance.toFixed(1), color: finalState.performance > 10 ? '#8b5cf6' : '#64748b' },
                     { label: 'Well-being', value: finalState.wellbeing.toFixed(1), color: finalState.wellbeing > 0 ? '#10b981' : '#ef4444' },
@@ -756,7 +756,7 @@ export default function EntrepreneurialWellbeingSimulator() {
                 </ScatterChart>
               </ResponsiveContainer>
               
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0.4rem', marginTop: '0.4rem', paddingTop: '0.4rem', borderTop: '1px solid #334155' }}>
+              <div className="stats-grid">
                 {multiRunResults.length > 0 && [
                   { label: 'Avg Performance', value: (multiRunResults.reduce((a, b) => a + b.performance, 0) / multiRunResults.length).toFixed(1) },
                   { label: 'Avg Well-being', value: (multiRunResults.reduce((a, b) => a + b.wellbeing, 0) / multiRunResults.length).toFixed(1) },
