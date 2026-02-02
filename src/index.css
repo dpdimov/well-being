@@ -4,8 +4,19 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 18px; /* Increased from default 16px for better readability */
+}
+
 body {
   font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Larger base font on mobile for better readability */
+@media (max-width: 768px) {
+  html {
+    font-size: 20px;
+  }
 }
 
 /* Main layout grid */
