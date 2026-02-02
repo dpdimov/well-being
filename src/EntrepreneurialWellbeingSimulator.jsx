@@ -193,8 +193,8 @@ const SystemDiagram = ({ currentState, isActive }) => {
   const getOpacity = (value, max = 1) => isActive ? Math.min(1, Math.max(0.2, Math.abs(value) / max)) : 0.15;
 
   return (
-    <div style={{ background: 'rgba(15, 23, 42, 0.9)', borderRadius: '12px', padding: '1rem', border: '1px solid #334155' }}>
-      <h3 style={{ fontSize: '1rem', color: '#94a3b8', marginBottom: '0.75rem', fontWeight: 500 }}>
+    <div style={{ background: 'rgba(15, 23, 42, 0.9)', borderRadius: '12px', padding: '1.25rem', border: '1px solid #334155' }}>
+      <h3 style={{ fontSize: '1.1rem', color: '#94a3b8', marginBottom: '1rem', fontWeight: 500 }}>
         System State
       </h3>
       
@@ -295,19 +295,19 @@ const SystemDiagram = ({ currentState, isActive }) => {
 // PARAMETER SLIDER
 // ============================================
 const ParameterSlider = ({ label, value, onChange, description, color, min = 0, max = 1, step = 0.1 }) => (
-  <div style={{ marginBottom: '1.1rem' }}>
-    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.35rem' }}>
+  <div style={{ marginBottom: '1.5rem' }}>
+    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
       <label style={{ fontWeight: 500, color: '#e2e8f0', fontSize: '1rem' }}>{label}</label>
-      <span style={{ background: color, padding: '2px 8px', borderRadius: '4px', fontSize: '1.05rem', fontWeight: 600, color: 'white' }}>
+      <span style={{ background: color, padding: '3px 10px', borderRadius: '4px', fontSize: '1.05rem', fontWeight: 600, color: 'white' }}>
         {value.toFixed(1)}
       </span>
     </div>
     <input
       type="range" min={min} max={max} step={step} value={value}
       onChange={(e) => onChange(parseFloat(e.target.value))}
-      style={{ width: '100%', accentColor: color, height: '5px' }}
+      style={{ width: '100%', accentColor: color, height: '6px' }}
     />
-    <p style={{ fontSize: '0.8rem', color: '#94a3b8', marginTop: '0.25rem', lineHeight: 1.35 }}>{description}</p>
+    <p style={{ fontSize: '0.8rem', color: '#94a3b8', marginTop: '0.4rem', lineHeight: 1.4 }}>{description}</p>
   </div>
 );
 
@@ -474,8 +474,8 @@ export default function EntrepreneurialWellbeingSimulator() {
       <div className="main-grid">
         
         {/* Left Panel: Parameters */}
-        <aside style={{ background: 'rgba(30, 41, 59, 0.7)', borderRadius: '10px', padding: '0.9rem', border: '1px solid #334155' }}>
-          <h2 style={{ fontSize: '1rem', marginBottom: '0.9rem', color: '#f1f5f9', fontWeight: 600 }}>
+        <aside style={{ background: 'rgba(30, 41, 59, 0.7)', borderRadius: '10px', padding: '1.25rem', border: '1px solid #334155' }}>
+          <h2 style={{ fontSize: '1.1rem', marginBottom: '1.25rem', color: '#f1f5f9', fontWeight: 600 }}>
             Parameters
           </h2>
           
@@ -730,7 +730,7 @@ export default function EntrepreneurialWellbeingSimulator() {
 
               {/* Outcome */}
               {outcome && (
-                <div style={{ background: outcome.bg, borderRadius: '6px', padding: '0.65rem', borderLeft: `3px solid ${outcome.color}`, border: '1px solid #334155' }}>
+                <div style={{ background: outcome.bg, borderRadius: '6px', padding: '1rem', borderLeft: `3px solid ${outcome.color}`, border: '1px solid #334155' }}>
                   <h4 style={{ fontSize: '1.05rem', color: outcome.color, marginBottom: '0.2rem', fontWeight: 600 }}>{outcome.title}</h4>
                   <p style={{ fontSize: '0.85rem', color: '#cbd5e1', lineHeight: 1.4 }}>{outcome.text}</p>
                 </div>
@@ -816,12 +816,12 @@ export default function EntrepreneurialWellbeingSimulator() {
           </div>
 
           {/* Insights */}
-          <div style={{ background: 'rgba(30, 41, 59, 0.7)', borderRadius: '10px', padding: '0.65rem', border: '1px solid #334155' }}>
-            <h3 style={{ fontSize: '0.9rem', color: '#94a3b8', marginBottom: '0.35rem', fontWeight: 500 }}>Key Insights</h3>
-            <ul style={{ fontSize: '0.8rem', color: '#cbd5e1', lineHeight: 1.45, paddingLeft: '0.85rem', margin: 0 }}>
-              <li style={{ marginBottom: '0.25rem' }}>Ambition activates system but also increases stressors</li>
-              <li style={{ marginBottom: '0.25rem' }}>Self-regulation has minimum threshold to avoid burnout</li>
-              <li style={{ marginBottom: '0.25rem' }}>Skill amplifies effort → performance</li>
+          <div style={{ background: 'rgba(30, 41, 59, 0.7)', borderRadius: '10px', padding: '1rem', border: '1px solid #334155' }}>
+            <h3 style={{ fontSize: '1rem', color: '#94a3b8', marginBottom: '0.5rem', fontWeight: 500 }}>Key Insights</h3>
+            <ul style={{ fontSize: '0.85rem', color: '#cbd5e1', lineHeight: 1.5, paddingLeft: '1rem', margin: 0 }}>
+              <li style={{ marginBottom: '0.35rem' }}>Ambition activates system but also increases stressors</li>
+              <li style={{ marginBottom: '0.35rem' }}>Self-regulation has minimum threshold to avoid burnout</li>
+              <li style={{ marginBottom: '0.35rem' }}>Skill amplifies effort → performance</li>
               <li>Performance feeds back to resources over time</li>
             </ul>
           </div>

@@ -22,9 +22,9 @@ body {
 /* Main layout grid */
 .main-grid {
   display: grid;
-  grid-template-columns: 200px 1fr 210px;
-  gap: 1rem;
-  max-width: 1150px;
+  grid-template-columns: 280px 1fr 280px;
+  gap: 1.25rem;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -48,7 +48,7 @@ body {
 /* Tablet breakpoint */
 @media (max-width: 1024px) {
   .main-grid {
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 260px 1fr;
   }
 
   .main-grid > aside:last-child {
